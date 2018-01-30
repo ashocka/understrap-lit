@@ -8,7 +8,7 @@ Run `gulp watch` while developing (this will compile sass to css on the fly).
 The main css is in sass/theme/_theme.scss and variables in sass/theme/_theme_variables.scss (you can override Bootstrap 4 variables here as well, take a look at [Bootstrap 4 documentation](https://getbootstrap.com/docs/4.0/getting-started/introduction/) for more info).
 
 ## Deploy
-Run `gulp build` for deploy, this will compile the theme in the dist/ directory, then upload dist/ to production wordpress' themes/ directory.
+Run `gulp dist` for deploy, this will compile the theme in the dist/ directory, then upload dist/ to production wordpress' themes/ directory.
 
 
 
