@@ -62,21 +62,21 @@ class understrap_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 		 * a 0 if the strings are equal.
 		 */
 		if ( strcasecmp( $item->attr_title, 'divider' ) == 0 && $depth === 1 ) {
-			$output .= $indent . '<li class="dropdown-divider" role="presentation">';
+			$output .= $indent . '<li class="dropdown-divider list-inline-item" role="presentation">';
 		} else if ( strcasecmp( $item->title, 'divider' ) == 0 && $depth === 1 ) {
-			$output .= $indent . '<li class="dropdown-divider" role="presentation">';
+			$output .= $indent . '<li class="dropdown-divider list-inline-item" role="presentation">';
 		} else if ( strcasecmp( $item->attr_title, 'dropdown-header' ) == 0 && $depth === 1 ) {
-			$output .= $indent . '<li class="dropdown-header" role="presentation">' . esc_html( $item->title );
+			$output .= $indent . '<li class="dropdown-header list-inline-item" role="presentation">' . esc_html( $item->title );
 		} else if ( strcasecmp( $item->attr_title, 'disabled' ) == 0 ) {
-			$output .= $indent . '<li class="disabled" role="presentation"><a href="#">' . esc_html( $item->title ) . '</a>';
+			$output .= $indent . '<li class="disabled list-inline-item" role="presentation"><a href="#">' . esc_html( $item->title ) . '</a>';
 		} else {
 			$class_names = $value = '';
 			$classes     = empty( $item->classes ) ? array() : (array) $item->classes;
-			$classes[]   = 'nav-item menu-item-' . $item->ID;
+			$classes[]   = 'list-inline-item menu-item-' . $item->ID;
 			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 			/*
 			if ( $args->has_children )
-			  $class_names .= ' dropdown';
+				$class_names .= ' dropdown';
 			*/
 			if ( $args->has_children && $depth === 0 ) {
 				$class_names .= ' dropdown';
@@ -131,7 +131,7 @@ class understrap_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			}
 			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title,
 					$item->ID ) . $args->link_after;
-			$item_output .= ( $args->has_children && 0 === $depth ) ? ' <span class="caret"></span></a>' : '</a>';
+			$item_output .= ( $args->has_children && 0 === $depth ) ? ' <span class="caret"></span></a>' : '<div class="link-border"></div></a>';
 			$item_output .= $args->after;
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		}

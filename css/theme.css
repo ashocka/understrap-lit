@@ -8,8 +8,8 @@
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
+  --purple: #AA92F2;
+  --pink: #E797CF;
   --red: #dc3545;
   --orange: #fd7e14;
   --yellow: #ffc107;
@@ -32,7 +32,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -56,11 +56,11 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #5e5e5e;
   text-align: left;
   background-color: #fff; }
 
@@ -138,12 +138,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #0052CC;
+  color: #AA92F2;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #003380;
+    color: #E797CF;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -314,7 +314,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
-  color: inherit; }
+  color: #353535; }
 
 h1, .h1 {
   font-size: 2.5rem; }
@@ -433,7 +433,7 @@ samp {
 
 code {
   font-size: 87.5%;
-  color: #e83e8c;
+  color: #E797CF;
   word-break: break-word; }
   a > code {
     color: inherit; }
@@ -2658,10 +2658,10 @@ fieldset[disabled] a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #0052CC;
+  color: #AA92F2;
   background-color: transparent; }
   .btn-link:hover {
-    color: #003380;
+    color: #E797CF;
     text-decoration: underline;
     background-color: transparent;
     border-color: transparent; }
@@ -2748,7 +2748,7 @@ tbody.collapse.show {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  color: #5e5e5e;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -4184,11 +4184,11 @@ tbody.collapse.show {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #0052CC;
+  color: #AA92F2;
   background-color: #fff;
   border: 1px solid #dee2e6; }
   .page-link:focus, .page-link:hover {
-    color: #003380;
+    color: #E797CF;
     text-decoration: none;
     background-color: #e9ecef;
     border-color: #dee2e6; }
@@ -4489,7 +4489,7 @@ tbody.collapse.show {
     text-decoration: none;
     background-color: #f8f9fa; }
   .list-group-item-action:active {
-    color: #212529;
+    color: #5e5e5e;
     background-color: #e9ecef; }
 
 .list-group-item {
@@ -4809,7 +4809,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4894,7 +4894,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5002,7 +5002,7 @@ button.close {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
   font-size: 1rem;
-  color: inherit;
+  color: #353535;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-top-left-radius: calc(0.3rem - 1px);
@@ -5012,7 +5012,7 @@ button.close {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #212529; }
+  color: #5e5e5e; }
 
 .carousel {
   position: relative; }
@@ -9550,6 +9550,78 @@ a.skip-link {
 
 .gallery-caption {
   display: block; }
+
+.breathy-text, .breathy-text-white, .navbar-brand-tagline, #main-menu .list-inline-item > a, .site-footer, .site-footer a {
+  letter-spacing: 5.6px;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 1.50em; }
+
+.breathy-text-white, .navbar-brand-tagline, #main-menu .list-inline-item > a, .site-footer, .site-footer a {
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px; }
+
+.content-text, p, ul, ol {
+  font-size: 1.15rem;
+  line-height: 2.2rem; }
+
+body {
+  height: 100%;
+  background: #AA92F2;
+  background-image: url(../img/bg-smaller.jpg); }
+
+.navbar-custom-logo {
+  text-align: center; }
+
+.navbar-brand {
+  margin: 100px 0px 20px 0px; }
+
+.wrapper-menu {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 40px 0px 0px 0px; }
+
+#main-menu {
+  margin: 0px; }
+  #main-menu .list-inline-item {
+    background-color: transparent; }
+    @media (max-width: 991.99px) {
+      #main-menu .list-inline-item {
+        display: block; } }
+    #main-menu .list-inline-item > a {
+      padding: 12px 16px 6px 16px;
+      font-size: 1.1rem; }
+    #main-menu .list-inline-item .link-border {
+      margin: 5px 15px;
+      background-color: rgba(255, 255, 255, 0);
+      height: 2px;
+      box-shadow: none; }
+    #main-menu .list-inline-item:hover .link-border {
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px; }
+  #main-menu .current-menu-item .link-border {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px; }
+
+#page-wrapper {
+  background-color: white; }
+
+p, ul, ol {
+  margin-bottom: 1.5rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", Georgia; }
+
+h1 {
+  margin-bottom: 15px; }
+
+.site-footer {
+  font-size: 1rem; }
+
+.site-footer a {
+  font-size: 1rem;
+  cursor: pointer; }
+  .site-footer a:hover {
+    text-decoration: underline; }
 
 /*
 * Use existing Bootstrap 4 classes and

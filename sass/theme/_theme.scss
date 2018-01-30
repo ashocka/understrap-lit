@@ -1,1 +1,169 @@
-// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+// === VARIABLES ===
+// See _theme_variables.scss for bootstrap configuration
+$content-bg-color: rgba(255, 255, 255, 1);
+$hint-color: rgba(255, 255, 255, 0.2);
+$paragraph-margin: 1.5rem;
+$menu-bg-color: rgba(0, 0, 0, 0.2);
+
+// a {
+//   cursor: pointer !important; // WHATS GOING ON?! TODO
+// }
+
+// === UTILITIES ===
+// This is a class-based society
+.breathy-text {
+  letter-spacing: 5.6px;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 1.50em;
+}
+.breathy-text-white {
+  @extend .breathy-text;
+  color: white;
+  text-shadow: rgba(0,0,0,0.5) 0px 2px 4px;
+}
+.content-text {
+  // letter-spacing: 1.2px;
+  font-size: 1.15rem;
+  line-height: 2.2rem;
+}
+
+// === CORPORE SANO ===
+body {
+  height:100%;
+
+  // this is so that background is rendered ASAP!
+  // couple of milliseconds later parallax.js takes data- settings from <nav>
+  // and renders the background image to nav element
+  background: $purple;
+  background-image: url(../img/bg-smaller.jpg);// no-repeat center bottom fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+}
+
+#wrapper-footer {
+  // background: url(../img/bg-smaller.jpg) no-repeat center bottom fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+}
+
+// === NAVIGATION ===
+// Header, logo and such
+
+.navbar-custom-logo {
+  text-align: center;
+}
+
+.navbar-brand {
+  margin: 100px 0px 20px 0px;
+}
+
+.navbar-brand-tagline {
+  @extend .breathy-text-white;
+}
+
+.wrapper-menu {
+  background-color: $menu-bg-color;
+  margin: 40px 0px 0px 0px;
+}
+
+#main-menu {
+  margin: 0px;
+
+  .list-inline-item {
+    background-color: transparent;
+    // transition: background-color 0.5s;
+
+    // border-width: 5px 0px;
+    // border-color: transparent;
+    // border-style: solid;
+
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+
+    & > a {
+      @extend .breathy-text-white;
+      padding: 12px 16px 6px 16px;
+      font-size: 1.1rem;
+    }
+
+    .link-border {
+      margin: 5px 15px;
+      // border-top: 3px solid transparent;
+      background-color: rgba(255,255,255,0);
+      height: 2px;
+      box-shadow: none;
+
+      // @include media-breakpoint-down(md) {
+      //   background-color: white;
+      //   box-shadow: rgba(0,0,0,0.5) 0px 2px 4px;
+      //   display: block;
+      // }
+    }
+
+    &:hover {
+      .link-border {
+        // display: block;
+        background-color: white;
+        box-shadow: rgba(0,0,0,0.5) 0px 2px 4px;
+      }
+
+    }
+
+  }
+
+  .current-menu-item {
+    // border-bottom-color: $content-bg-color;
+
+    .link-border {
+      // border-top-color: white;
+      // display: block;
+      background-color: white;
+      box-shadow: rgba(0,0,0,0.5) 0px 2px 4px;
+    }
+  }
+}
+
+// === CONTENT ===
+
+#page-wrapper {
+  // padding-top: 0px; // we want the menu to touch the content
+  background-color: $content-bg-color;
+}
+
+#content {
+  // @extend .content-text;
+}
+
+p, ul, ol {
+  @extend .content-text;
+  margin-bottom: $paragraph-margin;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font-family-serif;
+}
+h1 {
+  margin-bottom: 15px;
+}
+
+
+// === FOOTER ===
+.site-footer {
+  @extend .breathy-text-white;
+  font-size: 1rem;
+}
+.site-footer a {
+  @extend .breathy-text-white;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+

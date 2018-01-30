@@ -33,50 +33,58 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<nav data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri().'/img/bg-smaller.jpg' ?>">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">
 		<?php endif; ?>
 
 					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
+					<?php if ( ! has_custom_logo() ): ?>
 
 						<?php if ( is_front_page() && is_home() ) : ?>
 
 							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-							
+
 						<?php else : ?>
 
 							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						
-						<?php endif; ?>
-						
-					
-					<?php } else {
-						the_custom_logo();
-					} ?><!-- end custom logo -->
 
+						<?php endif; ?>
+
+					<?php else : ?>
+						<div class="navbar-custom-logo">
+							<?php the_custom_logo(); ?>
+							<!-- Tagline -->
+							<div class="navbar-brand-tagline">
+								<?php bloginfo('description'); ?>
+							</div>
+						</div>
+					<?php endif; ?><!-- end custom logo -->
+<!--
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
-					)
-				); ?>
+				</button> -->
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
 
+			<!-- The WordPress Menu goes here -->
+			<div class="wrapper-menu">
+				<div class="container">
+					<?php wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							//'container_class' => 'collapse navbar-collapse',
+							//'container_id'    => 'navbarNavDropdown',
+							'menu_class'      => 'list-inline',
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu',
+							'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+						)
+					); ?>
+				</div>
+			</div>
 		</nav><!-- .site-navigation -->
 
 	</div><!-- .wrapper-navbar end -->

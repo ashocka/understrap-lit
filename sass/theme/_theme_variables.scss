@@ -1,6 +1,17 @@
-// Use this file to overwrite the basic Bootstrap variables and add your own variables
-// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
-// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
-
+$pink: #E797CF;     // NOT bootstrap variable
+$purple: #AA92F2;   // NOT bootstrap variable
 
 $primary: #0052CC; // Thats a sample how you could change a BootStrap variable.
+
+$font-family-sans-serif:      'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif;
+$font-family-serif:           'Roboto Slab', Georgia; // NOT bootstrap variable
+
+$body-color:                #5e5e5e;
+$headings-color:            #353535;
+
+$link-color:                $purple;
+$link-hover-color:          $pink;
+$link-decoration:           none;
+$link-hover-decoration:     underline;
